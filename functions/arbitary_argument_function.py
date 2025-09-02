@@ -3,12 +3,11 @@ def sum(a, b, d, e):
     print(c)
 
 def sum_of_all_numbers(*args):
+    total = 0
     for i in args:
-        count=0
-        count=+i
-    print(count)
+        # print(i)
+        total += i
 
+    print(total)
 
-
-
-sum_of_all_numbers(1,2,3,4,5,6,7,8,9,10)
+sum_of_all_numbers(100,200)
