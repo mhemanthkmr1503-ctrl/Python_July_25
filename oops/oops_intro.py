@@ -12,6 +12,7 @@ class MyClass:
 abc = MyClass(10,20)
 xyz = MyClass(300,400)
 obj = MyClass()
+obj.helloWorld()
 print(abc.x, " <====> ", xyz.x)
 print(abc.y, " <====> ", xyz.y)
 print(obj.x, " <====> ", obj.y)
