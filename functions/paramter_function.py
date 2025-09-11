@@ -5,12 +5,14 @@ def sum():
 
 def paraCalc(a, b, operator):
     if operator == "+":
-        print(a + b)
+        return a + b
     elif operator == "-":
         print(a - b)
     else:
         print("Invalid Operator")
 
 
-paraCalc(15, 60, "*")
+value = paraCalc(15, 60, "-")
+print(value)
+
 
