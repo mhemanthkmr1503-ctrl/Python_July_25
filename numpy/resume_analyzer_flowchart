@@ -1,0 +1,30 @@
+digraph Resume_Analyzer_Flow {
+	rankdir=LR size=8
+	U [label=User color=lightblue shape=oval style=filled]
+	UR [label="Upload Resume (PDF/DOCX)" shape=box]
+	JP [label="Provide Job Description" shape=box]
+	PA [label="Parsing & Analysis Engine
+(NLP + Grammar + ATS Score)" color=lightyellow shape=box]
+	KE [label="Keyword Extraction
+(from Job Description)" color=lightyellow shape=box]
+	MS [label="Match & Suggest Improvements
+(Missing Keywords, Grammar Fixes)" color=lightyellow shape=box]
+	RG [label="AI Resume Generator
+(LLM-based)" color=lightgreen shape=box]
+	TP [label="Select Resume Template" shape=box]
+	DL [label="Download / Export Resume
+(PDF/DOCX)" shape=box]
+	DB [label="Database (User + Resume Data)" color=lightgrey shape=cylinder]
+	U -> UR
+	U -> JP
+	UR -> PA
+	JP -> KE
+	PA -> MS
+	KE -> MS
+	MS -> RG
+	RG -> TP
+	TP -> DL
+	UR -> DB
+	RG -> DB
+	DL -> DB
+}
